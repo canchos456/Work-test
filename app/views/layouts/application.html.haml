@@ -1,9 +1,10 @@
+
 !!!
 %html
 %head
-  %title Workout
-  = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-  = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %title Workout Log Application
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
+  = javascript_pack_tag 'application', 'data-turbolinks-eval' => false
   = csrf_meta_tags
 %body
   %nav.navbar.navbar-default
@@ -11,6 +12,9 @@
       .navbar-header
         = link_to "Workout Log", root_path, class: "navbar-brand"
       .nav.navbar-nav.navbar-right
-        = link_to "New Workout", new_workout_path, class: "navbar navbar-link"
+        = link_to "New Workout", new_workout_path, class: "nav navbar-link"
+
   .container
     = yield
+
+    
